@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/community.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="ZapX">ZapX</div> 
+        
+        
+
+        <ul>
+            
+           
+
+
+              
+        </ul>
+
+        <div class="toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="dropdown-menu">
+            
+            <li><a href="indexx.html" class="H-a">Home</a></li>
+            <li><a href="photo.html" class="H-a">Photographers</a></li>
+            
+        </div>
+      </nav>
+
+      <section class="co">
+        <h3 class="c-3">Community Standards</h3>
+        <p>Welcome to the ZapX community! Our Community Standards are designed to foster a safe, respectful, and inclusive environment for all users. By joining our community, you agree to abide by these standards and contribute positively to our collective experience.</p>
+    
+        <h4>1. Respect and Diversity</h4>
+        <p>We celebrate diversity and welcome individuals from all backgrounds. Treat others with kindness, empathy, and respect, regardless of their race, ethnicity, gender identity, sexual orientation, religion, age, or disability. Discriminatory language or behavior will not be tolerated.</p>
+    
+        <h4>2. Constructive Communication</h4>
+        <p>Engage in constructive and meaningful communication. Share your thoughts and opinions respectfully, even in times of disagreement. Avoid personal attacks, harassment, or intimidation. Foster open dialogue and be open to learning from others.</p>
+    
+        <h4>3. Safety and Privacy</h4>
+        <p>Prioritize the safety and privacy of yourself and others. Do not engage in or promote any activities that could harm or endanger anyone. Respect the privacy of others and refrain from sharing personal information without consent.</p>
+    
+        <h4>4. Intellectual Property</h4>
+        <p>Respect the intellectual property rights of others. Do not share or distribute content that you do not have the right to use. If you share content created by others, give proper credit and attribution.</p>
+    
+        <h4>5. Compliance with Laws and Regulations</h4>
+        <p>Follow all applicable laws, regulations, and our Terms and Conditions. Do not engage in any illegal activities or promote illegal behavior on our platform.</p>
+    
+        <h4>6. Reporting and Accountability</h4>
+        <p>If you encounter behavior that violates our Community Standards or Terms and Conditions, please report it to us promptly. We will investigate all reports thoroughly and take appropriate action. Remember that your actions and contributions shape our community, so hold yourself and others accountable.</p>
+    
+        <h4>7. Continuous Improvement</h4>
+        <p>We are committed to continuously improving our community standards and welcome feedback from our users. If you have suggestions or concerns about our standards, please reach out to us.</p>
+    
+        <p>By adhering to these Community Standards, you contribute to creating a welcoming and inclusive community where everyone can thrive. Thank you for being a part of the ZapX community!</p>
+    </section>
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-name">
+            <p> &copy; 2024 ZapX inc.</p>
+        </div> 
+
+        <div class="footer-links">
+            <a class="foot-text" href="privacy.html">Privacy Policy</a>
+            <a class="foot-text" href="terms.html">Terms</a>
+            <a class="foot-text" href="community.html">Community Standards</a>
+            <a href="mailto:info@zapxapp.com" class="foot-text" href="">Contact Us</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://x.com/i/flow/login?redirect_after_login=%2Fzapxapp"><i class="ri-twitter-x-fill"></i></a>
+            <a href="https://www.instagram.com/zapxapp/"><i class="ri-instagram-fill"></i></a>
+            <a href=""><i class="ri-github-fill"></i></a>
+            <a href=""><i class="ri-facebook-fill"></i></a>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    const toggle = document.querySelector('.toggle');
+    const toggleIcon = document.querySelector('.toggle i');
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const dropdownItems = document.querySelectorAll('.dropdown-menu li');
+
+// Toggle the visibility of each dropdown item when the toggle icon is clicked
+    toggle.onclick = function () {
+     dropdownMenu.classList.toggle('open');
+    const isOpen = dropdownMenu.classList.contains('open');
+
+    toggleIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars';
+
+// Toggle visibility of each dropdown item
+dropdownItems.forEach(item => {
+    item.style.display = isOpen ? 'flex' : 'none';
+});
+}; 
+// Close the dropdown menu and remove the 'open' class on any click outside the menu
+document.body.addEventListener('click', function (event) {
+        if (!dropdownMenu.contains(event.target) && !toggle.contains(event.target)) {
+            dropdownMenu.classList.remove('open');
+            toggleIcon.classList = 'fa-solid fa-bars';
+            dropdownItems.forEach(item => {
+                item.style.display = 'none';
+            });
+        }
+    });
+
+
+
+  </script>
+</html>
