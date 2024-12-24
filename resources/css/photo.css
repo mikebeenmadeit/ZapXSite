@@ -29,12 +29,10 @@ padding: 0 20px; /* Add padding to the nav */
 }
 
 .dropdown-menu a{
-  font-family: 'Dancing Script', cursive;
   color: black;
 }
 
 .dropdown-menu a:hover{
-  font-family: 'Dancing Script', cursive;
   color: #2c7c8c;
 }
 
